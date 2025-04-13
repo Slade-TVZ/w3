@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marin Slade">
+    <title>Marin Slade Priprema 2</title>
+    <link rel="icon" type="image/x-icon" href="TVZ-logo-v2 (2).webp">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0px; /* The border-spacing is set to match the last digit of the JMBAG (0) for a personalized design */
+            width: 100%;
+            margin-top: 20px;
+            table-layout: fixed;
+            position: relative;
+        }
+        td, th {
+            border: 2px solid #333;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            position: relative;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            caption-side: top;
+        }
+        .base-row {
+            height: 40px;
+        }
+        .double-row {
+            height: 80px;
+        }
+        .first-row th {
+            width: 20% !important;
+        }
+        .tooltip {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: none; ;
+        }
+        .tooltip:hover {
+            display: block;
+        }
+        
+        .city-image {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .radio-label {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            background-color: #af4c66;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+        table:hover + .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Marin Slade</h1>
+    <h2>JMBAG: 2401011967 </h2>
+
+        <table>
+            
+            <caption>Gradovi</caption>
+            <div class="tooltip">2020</div>
+            
+            <!-- Prvi red - 5 jednako širokih stupaca -->
+            <tr class="double-row first-row">
+                <th></th>
+                <th colspan="2"></th>
+                <th colspan="3"></th>
+                <th colspan="2"></th>
+                <th></th>
+            </tr>
+            
+            <!-- Ostali redovi -->
+            <tr class="base-row">
+                <th colspan="3"></th>
+                <th colspan="6"></th>
+            </tr>
+
+            <tr class="base-row">
+                <th colspan="6"></th>
+                <th colspan="3"></th>
+            </tr>
+
+            <tr class="base-row">
+                <th colspan="3" rowspan="2"></th>
+                <th colspan="6"></th>
+            </tr>
+
+            <!-- Peti red - sa slikama gradova -->
+            <tr class="base-row">
+                <td colspan="6" class="text-left">
+                    <div class="radio-container">
+                        <label class="radio-label">
+                            <input type="radio" name="city" value="zagreb" id="city-zagreb">
+                            <img src="https://via.placeholder.com/100x75?text=Zagreb" class="city-image" onclick="document.getElementById('city-zagreb').checked=true">
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="city" value="split">
+                            <img src="https://via.placeholder.com/100x75?text=Split" class="city-image" onclick="document.querySelector('input[name=city][value=split]').checked=true">
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="city" value="rijeka">
+                            <img src="https://via.placeholder.com/100x75?text=Rijeka" class="city-image" onclick="document.getElementById('city-rijeka').checked=true">
+                        </label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="base-row">
+                <th colspan="2" rowspan="3"></th>
+                <th colspan="5">
+                    <!-- Višestruki odabir -->
+                    <div class="form-group">
+                        <label>Sadržaji grada:</label><br>
+                        <input type="checkbox" name="content" value="kino"> Kino<br>
+                        <input type="checkbox" name="content" value="klub"> Klub<br>
+                        <input type="checkbox" name="content" value="kazaliste"> Kazalište<br>
+                        <input type="checkbox" name="content" value="klizaliste"> Klizalište<br>
+                        <input type="checkbox" name="content" value="kuglana"> Kuglana
+                    </div>
+                </th>
+                <th colspan="2" rowspan="3">
+                    <!-- Padajući izbornik -->
+                    <div class="form-group">
+                        <label for="street">Ulica:</label>
+                        <select name="street" id="street">
+                            <option value="iva">Ivana Gundulića</option>
+                            <option value="mar">Marije Jurić Zagorke</option>
+                            <option value="ant">Ante Starčevića</option>
+                            <option value="fra" selected>Franje Tuđmana</option>
+                            <option value="aug">Augusta Cesarca</option>
+                        </select>
+                    </div>
+                </th>
+            </tr>
+            
+            <tr class="base-row">
+                <th colspan="5">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </th>
+            </tr>
+            
+            <tr class="base-row">
+                <th colspan="5">
+                    <!-- URL -->
+                    <div class="form-group">
+                        <label for="url">URL:</label>
+                        <input type="url" name="url" id="url">
+                    </div>
+                </th>
+            </tr>
+
+            <tr class="base-row">
+                <th colspan="3">
+                    <!-- Lozinka -->
+                    <div class="form-group">
+                        <label for="password">Lozinka:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                </th>
+                <th colspan="3">
+                    <!-- Veliki tekst -->
+                    <div class="form-group">
+                        <label for="bigtext">Opis:</label>
+                        <textarea name="bigtext" id="bigtext" rows="3"></textarea>
+                    </div>
+                </th>
+                <th colspan="3">
+                    <!-- Kalendar -->
+                    <div class="form-group">
+                        <label for="date">Datum:</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                </th>
+            </tr>
+
+            <tr class="base-row">
+                <th rowspan="2"></th>
+                <th colspan="2" rowspan="5"></th>
+                <th rowspan="2"></th>
+                <th rowspan="2"></th>
+                <th rowspan="2"></th>
+                <th colspan="2" rowspan="5"></th>
+                <th rowspan="2"></th>
+            </tr>
+
+            <tr class="base-row"></tr>
+
+            <tr class="base-row">
+                <th></th>
+                <th colspan="3" rowspan="3"></th>
+                <th></th>
+            </tr>
+
+            <tr class="base-row">
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr class="base-row">
+                <th></th>
+                <th></th>
+            </tr>
+
+            <!-- Donji red - gumbi -->
+            <tr class="base-row">
+                <th colspan="2">
+                    <button type="reset">Ispočetka</button>
+                </th>
+                <th colspan="5"></th>
+                <th colspan="2">
+                    <button type="submit">Spremi</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        // Osigurava da se klik na sliku grada selektira i radio button
+        document.querySelectorAll('.city-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const radioId = this.previousElementSibling.id;
+                document.getElementById(radioId).checked = true;
+            });
+        });
+    </script>
+</body>
+</html>

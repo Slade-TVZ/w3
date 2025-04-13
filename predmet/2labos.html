@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labos 2</title>
+    <link rel="icon" href="./slike/favicon.ico" type="image/x-icon">
+</head>
+<center>
+    <body>
+        <form>
+            <table
+            border="1"
+            title="prijava"
+            cellspacing="0"
+            cellpadding="5"
+            width="70%"
+            style="table-layout: fixed">
+
+            <thead>
+                <tr height="75">
+                    <td colspan="12"><center><h1>Prijava na putovanje iz snova</h1></center></td>
+                </tr>
+            </thead>
+            <tr height="75">
+                <td colspan="6">
+                    <label for="ime_prezime">Ime i prezime:</label><br>
+                    <input type="text" id="ime" name="ime_prezime" placeholder="Ime i prezime">
+                </td>
+                <td colspan="4">
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="mail@domain">
+                </td>
+                <td colspan="2">
+                    <label for="broj_godina">Broj godina:</label><br>
+                    <input type="range" id="broj_godina" name="broj_godina" min="18" max="100" width="50%">
+                </td>
+            </tr>
+          
+            <tr height="75">
+                <td colspan="4" rowspan="5" style="vertical-align: bottom; text-align: right;">Odaberite jednu državu po kontinentu u koju želite otputovati:</td>
+                <td colspan="2" align="center"><b>Europa</b></td>
+                <td colspan="2" align="center"><b>Azija</b></td>
+                <td colspan="2" align="center"><b>Afrika</b></td>
+                <td colspan="2" align="center"><b>Sjeverna Amerika</b></td>
+            </tr>
+            <tr height="75">
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="hrvatska" name="europa" value="1"><center><label for="hrvatska">Hrvatska<br><br><img src="./slike/hr.png" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="japan" name="azija" value="1"><center><label for="japan">Japan<br><br><img src="./slike/jp.png" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="egipat" name="afrika" value="1"><center><label for="egipat">Egipat<br><br><img src="./slike/eg.png" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="kanada" name="s_amerika" value="1"><center><label for="kanada">Kanada<br><br><img src="./slike/ca.png" width="80%"></label></center>
+                </td>
+            </tr>
+       
+            <tr height="75"></tr>
+            <tr height="75">
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="grcka" name="europa" value="2"><center><label for="grcka">Grčka<br><br><img src="./slike/gr.jpg" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="indija" name="azija" value="2"><center><label for="indija">Indija<br><br><img src="./slike/ind.jpg" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="nigerija" name="afrika" value="2"><center><label for="nigerija">Nigerija<br><br><img src="./slike/ind.jpg" width="80%"></label></center>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id="meksiko" name="s_amerika" value="2"><center><label for="meksiko">Meksiko<br><br><img src="./slike/mex.png" width="80%"></label></center>
+                </td>
+            </tr>
+            <tr height="75"></tr>
+            <tr height="75">
+                <td colspan="6" align="center"><label for="br_drzava">Broj posjećenih država do sada:</label>
+                <td colspan="6" align="center">
+                    <select id="br_drzava" name="br_drzava">
+                       <option value="Niti jedna država">Niti jedna država</option>
+                       <option value="0-5_drzava">0-5 država</option>
+                       <option value="5-10_drzava">5-10 država</option>
+                       <option value="10-20_drzava">10-20 država</option>
+                       <option value="više_od_20_drzava" selected>više od 20 država</option>
+                    </select>
+                </td>
+            </tr>
+            <tr height="75">
+                <td colspan="8" rowspan="2">
+                    <p>Govorim ove strane jezike:</p>
+                    <input type="checkbox" id="engleski" value="jezik" name="engleski"><label for="engleski">Engleski</label><br>
+                    <input type="checkbox" id="njemački" value="jezik" name="njemački"><label for="njemački">Njemački</label><br>
+                    <input type="checkbox" id="japanski" value="jezik" name="japanski"><label for="japanski">Japanski</label>
+                </td>
+                <td colspan="4" rowspan="2" style="text-align: right;">
+                    <label for="napomena">Napomena:</label><br>
+                    <textarea id="napomena" name="napomena" cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr height="75"></tr>
+            <tr height="75">
+                <td colspan="5">
+                    <center>
+                        <label for="lozinka">Lozinka: </label>
+                        <input type="password" id="lozinka" name="lozinka" placeholder="Lozinka">
+                    </center>
+                </td>
+                <td colspan="7">
+                    <center>
+                        <label for="rlozinka">Ponovite lozinku: </label>
+                        <input type="password" id="rlozinka" name="rlozinka" placeholder="Ponovite lozinku">
+                    </center>
+                </td>
+            </tr>
+            <tr height="75">
+                <td colspan="4" style="text-align: right;">
+                    <input type="reset" value="Poništi">
+                </td>
+                <td colspan="6"></td>
+                <td colspan="2">
+                    <center><input type="submit" value="Pošalji"></center>
+                </td>
+            </tr>
+
+            </table>
+
+        </form>
+
+    
+    </body>
+</center>
+</html>
